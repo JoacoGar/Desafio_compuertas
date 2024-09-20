@@ -1,11 +1,11 @@
 namespace Compuertas;
 
-public class CompuertaAnd : ICompuertas
+public class CompuertaOr : ICompuertas
 {
     private string Name { get; set; }
     private List<IEntradas> EntradasDeCompuerta { get; set; }
     
-    public CompuertaAnd (string name)
+    public CompuertaOr (string name)
     {
         this.Name = name;
         this.EntradasDeCompuerta = new List<IEntradas>();
@@ -18,6 +18,7 @@ public class CompuertaAnd : ICompuertas
 
     public bool CalcularSalida()
     {
-        return (EntradasDeCompuerta[0].DevolverEntrada() && EntradasDeCompuerta[1].DevolverEntrada());
+        return (EntradasDeCompuerta[0].DevolverEntrada() || EntradasDeCompuerta[1].DevolverEntrada());
     }
 }
+
