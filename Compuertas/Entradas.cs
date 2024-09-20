@@ -11,6 +11,6 @@ public class Entrada : IEntradas
 
     public bool DevolverEntrada()
     {
-        return Valor;
+        return this.Valor;
     }
 }
