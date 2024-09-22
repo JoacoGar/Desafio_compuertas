@@ -4,3 +4,4 @@ public interface IEntradas
 {
     public bool DevolverEntrada();
 }
+
